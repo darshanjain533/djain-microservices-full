@@ -83,9 +83,9 @@ Before you start
 	Make sure you have OpenJDK 11 or newer installed.
 
 Download Keycloak
-	First step is to download and extract keycloak-19.0.1.zip from the Keycloak website.
+	First step is to download and extract keycloak-10.0.0.zip from the Keycloak website.
 
-After extracting you should have a directory named keycloak-19.0.1.
+After extracting you should have a directory named keycloak-18.0.0.
 
 Start Keycloak
 	From a terminal open the directory keycloak-19.0.1, then to start Keycloak run the following command.
