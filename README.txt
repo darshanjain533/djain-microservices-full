@@ -107,3 +107,4 @@ Login to the admin console
 
 Pending 
 1. Send email. spring-boot-email-service -to be implemented fully.
+2. JUnit 5 and Mokito
