@@ -16,14 +16,14 @@ https://github.com/tecnotab/tecnotab-microservices-youtube.git
 		-----------------------------------------------------------------------------------------------------------------------------------------------------------------
 		1.	|	spring-cloud-config-service			|		8888				|		@EnableConfigServer			|		localhost:8888					|	Do have eureka client service registration
 		2.	|	spring-cloud-eureka-service			|		8761				|		@EnableEurekaServer			|		localhost:8761/eureka/web		|
-		3.	|	employee-service (/emprest)			|		5000,5001			|		@EnableEurekaClient							|		localhost:5000					|	
+		3.	|	employee-service (/emprest)			|		5000,5001			|		@EnableEurekaClient			|		localhost:5000					|	
 		4. 	|	client-service (/client)			|		7000				|									|		localhost:7000					|
 		5. 	|	detail-service (/detail)			|		0					|									|		localhost:3000					|	This is a test service.if server.port = 0 is given --> Springboot will allocate available port of choice.
 		6. 	|	spring-cloud-gateway-service		|		80					|	2,	@EnableWebFluxSecurity		|		localhost:80 or localhost		|	This section is secured with oauth2 using keycloak. 
 		7. 	|	key cloak token server				|		8080				|									|		localhost:8080					|	admin:admin is the username and password
 		8.	|	zipkin server						|		9411				|									|		localhost:9411					|	
 		9.	|	spring-cloud-notification-service	|		6000, 9092			|									|										|	Start the Apache Kafka server / zookeeper server
-		
+		10.	|	elastic search						|		9200				|									|		localhost:9200								|
 if the security mechanism is enable on gateway-service, then the spring security also has to be applied to all the service where the clients needs to be registered. Like, spring security has to be enabled in eureka, employee, client, detail - on then those would be registered in eureka server. 		
 		
 		
@@ -48,6 +48,8 @@ RABBIT_URI=amqp://localhost java -jar /Volumes/SandiskMac/eclipse-workspace-mac-
 
 localhost:9411
 
+========= ELK =================
+https://www.youtube.com/watch?v=vZQMoY_2_AA
 
 ========= RabbitMQ ===============
 
