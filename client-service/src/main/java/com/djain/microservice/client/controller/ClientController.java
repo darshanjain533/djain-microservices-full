@@ -26,7 +26,7 @@ public class ClientController {
 	ClientService clientServ;
 	
 	@PostMapping("/webclient-create")
-	@CircuitBreaker(name = "circuitBreaker-client",fallbackMethod = "webclientFallMethod")
+	@CircuitBreaker(name = "circuitBreaker-webclient",fallbackMethod = "webclientFallMethod")
 	public CompletableFuture<Mono<Emp>> createEmpWeb(@RequestBody Emp request) {
 		log.info("inside empclient::::");
 		//return webClient.post().uri("/rest/details").header("Authorization", auth).bodyValue(request).retrieve().bodyToMono(Emp.class);
@@ -34,7 +34,7 @@ public class ClientController {
 	}
 	
 	@PostMapping("/resttemplate-create")
-	@CircuitBreaker(name = "circuitBreaker-client", fallbackMethod = "restclientFallMethod")
+	@CircuitBreaker(name = "circuitBreaker-rest", fallbackMethod = "restclientFallMethod")
 	public CompletableFuture<Emp> createEmpRest(@RequestBody Emp request) {
 		return clientServ.createEmpRestTemplate(request);
 	}
